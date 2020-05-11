@@ -11,8 +11,8 @@
       </p>
 
        <div class="field">
-         <input (input)="onInput($event.target.value)" class="input" />
-        <div ngClass = "">
+         <input [value] ="typedString"(input)="onInput($event.target.value)" class="input" />
+        <div >
          {{typedString}}
         </div>
 
@@ -20,6 +20,7 @@
        <div *ngIf = "typedString === randomSentance" class="box has-text-centered">
          <p  class="title">Success!</p>
        </div>
+       <button class="button is-centered" (click)="reset()">Reset</button>
     </div>
 
   </div>
